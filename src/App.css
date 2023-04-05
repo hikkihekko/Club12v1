@@ -1,0 +1,47 @@
+:root {
+    --vazur: #3E7A7B;
+    --gold: #fcbc55;
+    --white: #ffffff;
+  }
+  button {
+    display: inline-block;	
+    padding: 0 15px;
+      margin-top: 15px;
+  
+    outline: none;
+    border: 0px;
+    border-radius:15px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  
+    color: var(--gold);
+    background-color: var(--white);
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;  
+
+    transition: all 0.2s ease-in-out;
+  }
+  button:focus {
+    box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
+  }
+  button:hover {
+    color: #fff;
+    background-color: #6c757d;
+    transform: translateY(-2px);
+  }
+  button:active {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  button:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+  }

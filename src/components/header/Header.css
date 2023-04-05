@@ -1,0 +1,56 @@
+.header{
+    max-height: 90px;
+    width: 100%;
+    background-color: var(--vazur);
+}
+.logo-header{
+    background-image: url("/public/logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 64px;
+    height: 64px;
+
+    cursor: pointer;
+}
+.nav-bar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.nav-bar-header-items{
+    margin: 0; 
+    padding: 4px; 
+
+    font-size: 20px;
+}
+.nav-bar-header-item{
+    display: inline;
+    padding-left: 10px;
+}
+.nav-bar-header-item> a{
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+.nav-bar-header-item> a:hover{
+    color: var(--gold);
+    transform: translateY(-10px);
+}
+.connect> a {
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+.connect> a:hover{
+    color: var(--gold);
+}
+.connect-button{
+    margin: 0px 20px;
+    color: var(--vazur);
+}
+.connect-button:hover{
+    color: var(--gold);
+    background-color: var(--white);
+}
+  

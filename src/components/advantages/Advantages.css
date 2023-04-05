@@ -1,0 +1,38 @@
+.services-container{
+    margin-bottom: 40px;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border:1px solid var(--gold);
+    border-left: 0px;
+    border-right: 0px;
+    margin: 40px 10%;
+    padding: 20px 0px;
+}
+
+.advantages-card {
+    width: 420px;
+    padding: 30px;   
+
+    text-align: center;
+}
+.advantages-card>h3{
+    font-size: 25px;
+    color: var(--vazur);
+}
+.advantages-card-content {
+	margin-top: 30px;
+}
+.advantages-icon{
+    height: 64px;
+    width: auto;
+    color: var(--gold);
+}
+.map{
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 40px;
+}

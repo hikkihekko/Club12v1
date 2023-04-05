@@ -1,0 +1,44 @@
+.buy-invest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.buy-invest-container{
+    border: 2px solid var(--vazur);
+    border-radius: 15px;
+    display: flex;
+}
+.buy-block{
+    padding: 30px;
+    text-align: center;
+}
+.buy-block>h3{
+    color: var(--gold);
+    padding-bottom: 10px;
+}
+.invest-block{
+    padding: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.invest-block>h3{
+    color: var(--gold);
+}
+.invest-block>p{
+    padding-top: 10px;
+}
+.invest-block>span{
+    padding-top: 10px;
+}
+.invest-block>span:nth-child(4){
+    font-weight: bold;
+    font-size: larger;
+    color: var(--vazur);
+}

@@ -1,0 +1,13 @@
+[{
+    "id":1,"location": "Астана","type":"Апартаменты","src":"./img/floor2-1-1.png","floor":2,"isActive":true
+},{
+    "id":2,"location": "Астана","type":"Апартаменты","src":"./img/floor2-1-2 .png","floor":2,"isActive":false
+},{
+    "id":3,"location": "Астана","type":"Апартаменты","src":"./img/floor2-1-3.png","floor":2,"isActive":false
+},{
+    "id":4,"location": "Астана","type":"Апартаменты","src":"./img/floor3-1-1.png","floor":3,"isActive":false
+},{
+    "id":5,"location": "Астана","type":"Апартаменты","src":"./img/floor3-1-2.png","floor":3,"isActive":false
+},{
+    "id":6,"location": "Астана","type":"Апартаменты","src":"./img/floor3-1-3.png","floor":3,"isActive":false
+}]
