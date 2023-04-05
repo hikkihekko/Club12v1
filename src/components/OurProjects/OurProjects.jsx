@@ -42,7 +42,7 @@ function OurProjects (){
     ],
   };
   return (
-    <div className="slider-container">
+    <div id="projects" className="slider-container">
         <Slider {...settings} className="slider-container">
         {Array.from({ length: 5 }).map((_, index) => (
             <div className="slider-card" key={index}>

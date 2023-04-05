@@ -6,7 +6,7 @@ function BuyInvest() {
     const [ModalActive, setModalActive] = useState(false);
 
     return(
-        <div className="buy-invest">
+        <div id="buy-invest" className="buy-invest">
             <div className="buy-invest-container">
                 <div className="buy-block">
                     <h3>Купить кваритру</h3>

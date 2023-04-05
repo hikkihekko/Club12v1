@@ -18,7 +18,7 @@ function Layouts() {
     }
 
   return (
-    <div className="layouts-container">
+    <div id="layouts" className="layouts-container">
         <div className="layouts-card">
             <div className="bytton-conteyner">
                 {Aparts.map((element) => (

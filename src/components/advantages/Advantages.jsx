@@ -7,7 +7,7 @@ import {TbBuildingBridge} from "react-icons/tb";
 function Advantages(){
     return(
         <>
-        <div className="services">
+        <div id="services" className="services">
             <div className="advantages-card">
                     <RiBuilding2Line className="advantages-icon" />
                 <h3>Прекрасная инфраструктура</h3>

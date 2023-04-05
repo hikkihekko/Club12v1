@@ -3,7 +3,7 @@ import "./AboutProject.css"
 
 function AboutProject(){
     return(
-        <div className="OurAdvantages">
+        <div id="advanteges" className="OurAdvantages">
             <h2 className="advanteges-header">Шагните в мир Club 12 и ощутите вершину роскоши,<br/> живя в самом сердце Депутатского городка Астаны</h2>
             <div className="advantages-container container1 advantages-text-container">
                 <p className="advantages-paragraph">Каждый аспект проекта был тщательно продуман, чтобы предоставить жителям максимальную современную жизнь. От гладкой и стильной архитектуры до высококачественной отделки и первоклассных удобств. </p>
