@@ -1,12 +1,11 @@
 import React from 'react';
 import './ContactForm.css';
-import {useInput} from '../ContactForm/hooks/useInput';
-import {handleSubmit} from '../ContactForm/handleSubmit'
+import { useInput } from '../ContactForm/hooks/useInput';
+import { handleSubmit } from '../ContactForm/handleSubmit'
 
 function ContactForm(){
     const email = useInput('',{isEmpty: true});
     const name = useInput('',{isEmpty: true});
-
 
     return(
         <div className="input-form-container">
@@ -16,7 +15,6 @@ function ContactForm(){
                     <p className='input-form-paragraph'>Для этого оставьте, пожалуйста, Ваши контактные данные</p>
                 </div>
                 <div className="input-form">
-                    <h1 className='success' id="msg"></h1>
                     <div className="input-error-container">
                         {(email.isDirty && email.isEmpty) && <div className="input-error"> Поле не может быть пустым!</div>}
                         {(name.isDirty && name.isEmpty) && <div className="input-error"> Пожалуйска укажите имя !</div>}
@@ -26,7 +24,7 @@ function ContactForm(){
                         <input type="email" name="email" onChange={ e => name.onChange(e)} onBlur={e => name.onBlur(e)} value={name.value} placeholder='Email' className="input" /><br/>
                         <input type="tel" name="phone" placeholder='Phone' className="input" /><br/>
                         <textarea type="text" name="message" placeholder='Your answer' className="input input-message" /><br/>
-                        <input type="submit" id="sub" className='send-value-button '/>
+                        <input type="submit" id="sub" className='send-value-button ' value="Submit" />
                     </form>
                 </div>
             </div>
@@ -34,5 +32,5 @@ function ContactForm(){
     )
 };
 
+export default ContactForm;
 
-export default ContactForm; 
