@@ -94,6 +94,7 @@ width: 80%;
 }
 .advantages-container {
     min-height: auto;
+  background-attachment: local;
 }
 .advantages-paragraph {
   font-size: 30px;
