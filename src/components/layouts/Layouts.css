@@ -64,9 +64,6 @@
     .bytton-conteyner>button{
         flex-basis: 33%;
     }
-    .layouts-container {
-        height: 800px;
-    }
     .card {
         padding: 0px;
         flex-direction: column;
@@ -84,6 +81,7 @@
         font-size: 30px;
     }
     .layouts-container {
-        height: 1000px;
+        height: 1100px;
+        align-items: center;
     }
   }
