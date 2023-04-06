@@ -20,7 +20,7 @@
   flex-direction: column;
 }
 .input-form-image{
-    width: 470px;
+    max-width: 470px;
     height: 100%;
     background-image: url("./img/ContactFormBcg.png");
     background-repeat: no-repeat;
@@ -56,11 +56,13 @@
     text-align: center;
     position: relative;
     color: var(--gold);
+    width: 80%;
   }
   .input-form-paragraph{
     text-align: center;
     position: relative;
     color: white;
+    width: 80%;
   }
   .input-form{
     padding: 20px;
@@ -151,4 +153,19 @@
 .send-value-button:disabled {
 	pointer-events: none;
 	opacity: 0.65;
+}
+@media only screen and (max-width: 780px) {
+  .card {
+      padding: 0px;
+      flex-direction: column;
+  }
+  .input-form-card {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card {
+      padding: 0px;
+      flex-direction: column;
+  }
 }

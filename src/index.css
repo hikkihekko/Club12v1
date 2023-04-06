@@ -1,1 +1,7 @@
 @import "node_modules/normalize.css/normalize.css";
+
+@media only screen and (max-width: 850px) {
+    * {
+        font-size: 14px;
+    }
+  }

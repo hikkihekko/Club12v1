@@ -1,8 +1,14 @@
 .layouts-container{
     width: 100%;
-    height: fit-content;
+    height: 420px;
     display: flex;
     justify-content: center;
+}
+.bytton-conteyner{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .layouts-card{
     max-height: 600px;
@@ -47,11 +53,26 @@
 }
 .card-text-paragraph:nth-child(4){
     padding-bottom: 30px;
-    border-bottom: 1px solid var(--vazur);
 }
 
   .button:nth-child(n+2){
     margin-left: 20px;
   }
-
+  @media screen and (max-width: 1200px){
+    
+  }
+  @media only screen and (max-width: 950px) {
+    .bytton-conteyner>button{
+        flex-basis: 33%;
+    }
+    .layouts-container {
+        height: 600px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .card {
+        padding: 0px;
+        flex-direction: column;
+    }
+  }
   

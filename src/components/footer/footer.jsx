@@ -24,9 +24,6 @@ function Footer(){
                             <li><a href="tel:+97142473678" className="elementor-item"><BsPhoneFill className="social"/></a></li>
                         </ul>
                     </div>
-                    <p className="call-paragraph">
-                        Построим счастливый дом для вашей семьи!
-                    </p>
                 </div>
             </div>
         </footer>

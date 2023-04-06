@@ -24,7 +24,8 @@
 .advantages-container{
   margin-top: 150px;
   width: 80%;
-  height: 60vh;
+  min-height: 60vh;
+  max-height: fit-content;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -79,8 +80,27 @@ position: relative;
 color: var(--gold);
 width: 80%;
 }
-@media only screen and (max-width: 979px) {
-  * {
+@media screen and (max-width: 1200px){
+  .OurAdvantages {
+    margin-top: 40px;
+}
+.advantages-container {
+  margin-top: 100px;
+}
+}
+@media only screen and (max-width: 850px) {
+  .advanteges-header {
     font-size: 30px;
-  }
+}
+.advantages-paragraph {
+  font-size: 20px;
+}
+}
+@media only screen and (max-width: 500px) {
+.advantages-paragraph {
+  font-size: 16px;
+}
+.advanteges-header {
+  font-size: 20px;
+}
 }
