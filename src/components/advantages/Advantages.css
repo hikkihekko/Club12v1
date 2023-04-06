@@ -1,7 +1,7 @@
 .services-container{
     margin-bottom: 40px;
-}
-.services {
+    }
+    .services {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -11,28 +11,29 @@
     border-right: 0px;
     margin: 40px 10%;
     padding: 20px 0px;
-}
-
-.advantages-card {
+    }
+    
+    .advantages-card {
     width: 420px;
-    padding: 30px;   
-
+    padding: 30px;
+    
     text-align: center;
-}
-.advantages-card>h3{
+    }
+    .advantages-card>h3{
     font-size: 25px;
     color: var(--vazur);
-}
-.advantages-card-content {
-	margin-top: 30px;
-}
-.advantages-icon{
+    }
+    .advantages-card-content {
+    margin-top: 30px;
+    }
+    .advantages-icon{
     height: 64px;
     width: auto;
     color: var(--gold);
-}
-.map{
+    }
+    .map{
     width: 100%;
     height: 60vh;
     margin-bottom: 40px;
-}
+    padding: 0 20px;
+    }

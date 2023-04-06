@@ -3,6 +3,9 @@
     --gold: #fcbc55;
     --white: #ffffff;
   }
+  *{
+    font-family: 'Montserrat', sans-serif;
+  }
   button {
     display: inline-block;	
     padding: 0 15px;

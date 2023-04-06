@@ -1,16 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ModalConnect from "../ModalConnect/ModalConnect";
 import "../header/Header.css";
 import { Link } from "react-scroll";
 
 function Header() {
-  const [ModalConnectActive, setModalConnectActive] = useState(false);
+  const [modalConnectActive, setModalConnectActive] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (menuActive) {
+      body.classList.add("modal-open");
+    } else {
+      body.classList.remove("modal-open");
+    }
+  }, [menuActive]);
+  
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
+  
+  const closeMenu = () => {
+    setMenuActive(false);
+  }
 
   return (
     <header className="header">
       <nav className="nav-bar-header">
         <div className="logo-header" />
-        <ul className="nav-bar-header-items">
+        <div className="menu-icon" onClick={toggleMenu}>
+          <i className={menuActive ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={` ${menuActive ? "nav-bar-header-items nav-bar-header-items-active" : "nav-bar-header-items"}`}>
           <li className="nav-bar-header-item">
             <Link
               to="advanteges"
@@ -18,6 +39,7 @@ function Header() {
               smooth={true}
               duration={500}
               offset={-50}
+              onClick={closeMenu}
             >
               О проекте
             </Link>
@@ -29,6 +51,7 @@ function Header() {
               smooth={true}
               duration={500}
               offset={-50}
+              onClick={closeMenu}
             >
               Галерея
             </Link>
@@ -40,6 +63,7 @@ function Header() {
               smooth={true}
               duration={500}
               offset={-50}
+              onClick={closeMenu}
             >
               Купить квартиру
             </Link>
@@ -51,6 +75,7 @@ function Header() {
               smooth={true}
               duration={500}
               offset={-50}
+              onClick={closeMenu}
             >
               Цена инвестиции
             </Link>
@@ -62,6 +87,7 @@ function Header() {
               smooth={true}
               duration={500}
               offset={-50}
+              onClick={closeMenu}
             >
               Планировка
             </Link>
@@ -73,6 +99,7 @@ function Header() {
               smooth={true}
               duration={500}
               offset={-50}
+              onClick={closeMenu}
             >
               Преимущества
             </Link>
@@ -88,7 +115,10 @@ function Header() {
           >
             Связь
           </button>
-          <ModalConnect active={ModalConnectActive} setActive={setModalConnectActive} />
+          <ModalConnect
+            active={modalConnectActive}
+            setActive={setModalConnectActive}
+          />
         </div>
       </nav>
     </header>
@@ -96,4 +126,7 @@ function Header() {
 }
 
 export default Header;
+
+
+
 
