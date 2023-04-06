@@ -22,14 +22,12 @@
 }
 
 .advantages-container{
-  margin-top: 150px;
   width: 80%;
   min-height: 60vh;
   max-height: fit-content;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-attachment: fixed;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,54 +47,83 @@
   position: relative;
   border-radius: 15px;
 }
+.about-project-text-container{
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.about-project-card{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0px 70px;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.06);
+}
 .container1{
   background-image: url("./img-our-adv/1.png");
 }
 .container2{
   background-image: url("./img-our-adv/2.png");
 }
-
-.advantages-container::before{
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(62, 122, 123, 0.5);
-  padding: 0; 
-  margin: 0; 
-  border-radius: 15px;
+.about-project-connect-text{
+  margin-top: 20px;
+  text-align: center;
+  color: #0000009a;
 }
 .advantages-paragraph{
 position: relative;
 margin-bottom: 30px;
 width: 80%;
+text-align: center;
 }
 .advanteges-header{
 text-align: center;
 position: relative;
 color: var(--gold);
 width: 80%;
+padding-bottom: 40px;
+border-bottom: 1px solid var(--vazur);
 }
 @media screen and (max-width: 1200px){
   .OurAdvantages {
     margin-top: 40px;
 }
 .advantages-container {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 }
 @media only screen and (max-width: 980px) {
+  .about-project-card{
+    flex-direction: column;
+  }
   .advanteges-header {
-    font-size: 35px;
+    font-size: 50px;
 }
 .advantages-container {
-    min-height: auto;
-  background-attachment: local;
+    min-height: 460px;
+  background-attachment: local;  
 }
 .advantages-paragraph {
-  font-size: 30px;
+  text-align: center;
+  font-size: 40px;
+}
+.about-project-text-container >button{
+  font-size: 40px;
+  padding: 20px;
+  height: auto ;
+  box-shadow: 4px 4px 10px rgba(8, 8, 8, 0.404);
+}
+.last-paragpaph{
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--vazur);
 }
 }

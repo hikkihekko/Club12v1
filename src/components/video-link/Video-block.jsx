@@ -19,7 +19,7 @@ function VideoLink() {
             <h2 className="cutaway-text-header">Club 12 </h2>
             <span className="cutaway-text-paragraph">идеально подходит для тех, кто ищет вершину современной жизни.</span>
             <div className="button-container">
-              <button onClick={playVideo}>Play Video</button>
+              <button className="button-play" onClick={playVideo}>Play Video</button>
               <button onClick={()=> setModalActive(true)}>Связаться с нами</button>
             </div>
         </div>
