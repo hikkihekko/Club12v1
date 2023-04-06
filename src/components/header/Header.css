@@ -24,7 +24,7 @@
     margin: 0; 
     padding: 4px; 
 
-    font-size: 20px;
+    font-size: 18px;
 }
 .nav-bar-header-item{
     display: inline;
@@ -77,15 +77,17 @@
         position: relative;
         z-index: 3;
       }
-      .nav-bar-header-items {
-        display: none;
+      .nav-bar-header-item{
+        background-color: rgb(78, 139, 201);
+        color: #f71414;
       }
 }
-@media screen and (max-width: 550px) {
-    .nav-bar-header-items {
-      font-size: 36px;
-    }
-  }  
+@media screen and (max-width: 950px) {
+    .nav-bar-header-item{
+        background-color: rgb(156, 224, 92);
+        color: #f71414;
+      }
+}
 .nav-bar-header-items-active {
     display: flex;
     justify-content: center;

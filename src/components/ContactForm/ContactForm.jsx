@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContactForm.css';
-import { useInput } from '../ContactForm/hooks/useInput';
-import { handleSubmit } from '../ContactForm/handleSubmit'
+import { useInput } from "../ContactForm/hooks/useInput";
+import { handleSubmit } from "../ContactForm/handleSubmit";
 
 function ContactForm(){
     const email = useInput('',{isEmpty: true});

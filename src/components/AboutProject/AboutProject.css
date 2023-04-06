@@ -79,3 +79,8 @@ position: relative;
 color: var(--gold);
 width: 80%;
 }
+@media only screen and (max-width: 979px) {
+  * {
+    font-size: 30px;
+  }
+}
