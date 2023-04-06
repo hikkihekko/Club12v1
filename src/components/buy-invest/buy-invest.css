@@ -57,13 +57,13 @@
     
     @media screen and (max-width: 1200px){
         .buy-block .invest-block>p{
-            font-size: 20px;
+            font-size: 30px;
         }
         .buy-block .invest-block>h3{
-            font-size: 20px;
+            font-size: 30px;
         }
       }
-      @media only screen and (max-width: 850px) {
+      @media only screen and (max-width: 980px) {
         .buy-block{
             border-bottom: 1px solid var(--vazur);
             border-right: none;
@@ -71,12 +71,17 @@
         .buy-invest-container {
             flex-direction: column;
         }
-      }
-      @media only screen and (max-width: 500px) {
-        .buy-block .invest-block>p{
-            font-size: 16px;
+        .invest-block>p{
+            font-size: 30px;
         }
-        .buy-block .invest-block>h3{
-            font-size: 16px;
+        .invest-block>h3{
+            font-size: 30px;
+        }
+        .buy-block>p{
+            font-size: 30px;
+        }
+        .buy-block>h3{
+            font-size: 30px;
         }
       }
+ 

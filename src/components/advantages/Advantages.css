@@ -37,3 +37,11 @@
     margin-bottom: 40px;
     padding: 0 20px;
     }
+    @media only screen and (max-width: 980px) {
+        .advantages-card>h3{
+            font-size: 30px;
+        }
+        .advantages-card-content{
+            font-size: 30px;
+        }
+    }

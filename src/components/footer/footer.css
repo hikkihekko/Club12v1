@@ -33,3 +33,16 @@
 .call-paragraph{
     font-size: 20px;
 }
+@media only screen and (max-width: 980px) {
+    .more-info>h4{
+        font-size: 30px;
+    }
+    .socials>li>svg{
+        width: 38px;
+        height: auto;
+    }
+    .socials>li>a>svg{
+        width: 38px;
+        height: auto;
+    }
+  }

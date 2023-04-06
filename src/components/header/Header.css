@@ -78,10 +78,30 @@
         z-index: 3;
       }
 }
-@media only screen and (max-width: 850px){
-    .cutaway-text-header {
+@media only screen and (max-width: 980px){
+    .header{
+        position: fixed;
+        z-index: 3;
+        top: 0;
+    }
+    .nav-bar-header-items-active>li {
+       font-size: 40px;
+    }
+    .fa-times:before{
+        font-size: 40px;
+    }
+    .fa-bars:before {
+        font-size: 40px;
+    }
+    .nav-bar-header{
+        height: 90px;
+    }
+    .connect-button{
         font-size: 30px;
-        margin-bottom: 0px;
+    }
+    .menu-icon{
+        position: absolute;
+        left: 50%;
     }
 }
 .nav-bar-header-items-active {

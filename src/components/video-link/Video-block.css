@@ -68,15 +68,12 @@
       top: 300px;
     }
   }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 980px) {
   .cutaway-text-header {
-    font-size: 30px;
-}
-.cutaway-text-container {
-  top: 200px;
+    font-size: 40px;
 }
 .cutaway-text-paragraph {
-  font-size: 20px;
+  font-size: 30px;
   display: block;
   margin-bottom: 20px;
 }
@@ -86,29 +83,8 @@
       flex-direction: row;
       justify-content: space-evenly;
   }
-  .button-container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 button{
   font-weight: 400;
-}
-}
-@media only screen and (max-width: 500px) {
-  .cutaway-text-header {
-    font-size: 20px;
-}
-.cutaway-text-container {
-  top: 200px;
-}
-.cutaway-text-paragraph {
-  font-size: 12px;
-  display: block;
-  margin-bottom: 20px;
-}
-button{
-  font-size: 12px;
+  font-size: 30px;
 }
 }

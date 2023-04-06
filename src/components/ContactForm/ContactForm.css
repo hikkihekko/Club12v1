@@ -154,7 +154,7 @@
 	pointer-events: none;
 	opacity: 0.65;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 980px) {
   .card {
       padding: 0px;
       flex-direction: column;
@@ -162,10 +162,23 @@
   .input-form-card {
     padding: 0px;
   }
-}
-@media only screen and (max-width: 600px) {
-  .card {
-      padding: 0px;
-      flex-direction: column;
+  .input-form-image>h2{
+    font-size: 30px;
+  }
+  .input-form-image>p{
+    font-size: 30px;
+  }
+  .input-form-image{
+    max-width: 340px;
+  }
+  .input-error{
+    font-size: 30px;
+  }
+  .input-container>input{
+    font-size: 30px;
+    height: calc(4.25rem + 2px);
+  }
+  .input-container>textarea{
+    font-size: 30px;
   }
 }

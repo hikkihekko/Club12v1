@@ -88,19 +88,14 @@ width: 80%;
   margin-top: 100px;
 }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 980px) {
   .advanteges-header {
-    font-size: 30px;
+    font-size: 35px;
+}
+.advantages-container {
+    min-height: auto;
 }
 .advantages-paragraph {
-  font-size: 20px;
-}
-}
-@media only screen and (max-width: 500px) {
-.advantages-paragraph {
-  font-size: 16px;
-}
-.advanteges-header {
-  font-size: 20px;
+  font-size: 30px;
 }
 }
