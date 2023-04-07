@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import "../layouts/Layouts.css";
 import { IoLocationOutline } from "react-icons/io5";
@@ -7,11 +7,11 @@ import { CiViewTable } from "react-icons/ci";
 import Aparts from "./About-apart.json";
 
 function Layouts() {
-
-        const { ref, inViewLayouts} = useInView({
-          threshold: 0.2,
-        });
-        console.log(inViewLayouts)
+    const [View, SetView] = useState(false);
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+      });
+      useEffect(()=>{SetView(true)},[inView]);
 
     const [VisibleElement, setVisibleElement] = useState(
         Aparts.filter((el) => el.isActive)
@@ -34,7 +34,8 @@ function Layouts() {
                 </button>
                 ))}
             </div>
-        {VisibleElement.map((element) => (
+        { View ? 
+        VisibleElement.map((element) => (
             <div key={element.id} className="card">
                 <div className="card-img-container">
                     <img src={element.src} alt="apart" className="card-img" />
@@ -56,6 +57,8 @@ function Layouts() {
             </div>
             </div>
         ))
+        :
+        <div></div>
         }
       </div>
     </div>

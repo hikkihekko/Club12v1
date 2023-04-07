@@ -1,13 +1,19 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useInView } from 'react-intersection-observer';
 import Slider from "react-slick";
 import "./OurProjects.css";
 
 function OurProjects (){
-
-  const { slider, inView} = useInView({
-    threshold: 0.1,
+  const [ViewProject, SetViewProject] = useState(false);
+  const { ref:Projects, inView: inViewProjects } = useInView({
+    threshold: 0.2,
   });
+
+  useEffect(()=>{
+    if (inViewProjects) {
+      SetViewProject(true)
+    }
+  },[inViewProjects]);
 
   const settings = {
     dots: false,
@@ -32,22 +38,22 @@ function OurProjects (){
       },
     ],
   };
+
   return (
-    <div ref={slider} id="projects" className="slider-container">
-      <Slider {...settings} className="slider-container">
+    <div ref={Projects} id="projects" className="slider-container">
+      <Slider {...settings} className={`slider-container ${ViewProject ? 'visible' : ''}`}>
         {Array.from({ length: 5 }).map((_, index) => (
-            <div className="slider-card" key={index}>
+          <div className="slider-card" key={index}>
             <img
-                src={`./img-slider/${index+1}.png`}
-                alt="img"
-                className={"slider-img"}
+              src={`./img-slider/${index+1}.png`}
+              alt="img"
+              className={"slider-img"}
             />
-            </div>
+          </div>
         ))}
-        </Slider>
+      </Slider>
     </div>
   );
 }
 
 export default OurProjects;
-
