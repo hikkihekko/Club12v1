@@ -1,8 +1,14 @@
 import React from "react";
+import { useInView } from 'react-intersection-observer';
 import Slider from "react-slick";
 import "./OurProjects.css";
 
 function OurProjects (){
+
+  const { slider, inView} = useInView({
+    threshold: 0.1,
+  });
+
   const settings = {
     dots: false,
     infinite: true,
@@ -27,8 +33,8 @@ function OurProjects (){
     ],
   };
   return (
-    <div id="projects" className="slider-container">
-        <Slider {...settings} className="slider-container">
+    <div ref={slider} id="projects" className="slider-container">
+      <Slider {...settings} className="slider-container">
         {Array.from({ length: 5 }).map((_, index) => (
             <div className="slider-card" key={index}>
             <img

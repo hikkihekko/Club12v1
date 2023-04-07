@@ -47,4 +47,9 @@
   button:disabled {
     pointer-events: none;
     opacity: 0.65;
-  }  
+  }
+  @media screen and (  max-width:980px){
+    button{
+      font-size: 30px;
+    }
+  }

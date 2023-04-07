@@ -80,8 +80,11 @@
     .card-text-paragraph{
         font-size: 30px;
     }
+    .card-img{
+        max-width: 550px;
+    }
     .layouts-container {
-        height: 1100px;
+        height: 1300px;
         align-items: center;
     }
     .layouts-card {
