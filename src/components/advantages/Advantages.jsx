@@ -13,6 +13,18 @@ function Advantages(){
       });
     useEffect(()=>{SetViewAdv(true)},[InViewAdv]);
 
+    const [ViewAdv2, SetViewAdv2] = useState(false);
+    const { ref:Adv2, inViewMap:InViewAdv2} = useInView({
+        threshold: 0.1,
+      });
+    useEffect(()=>{SetViewAdv2(true)},[InViewAdv2]);
+
+    const [ViewAdv3, SetViewAdv3] = useState(false);
+    const { ref:Adv3, inViewMap:InViewAdv3} = useInView({
+        threshold: 0.1,
+      });
+    useEffect(()=>{SetViewAdv3(true)},[InViewAdv3]);
+
 
     const [ViewMap, SetViewMap] = useState(false);
     const { ref:Map, inViewMap:ViewMapMap} = useInView({
@@ -31,14 +43,14 @@ function Advantages(){
                     <p>Депутатский город - это один из самых современных и комфортных районов Астаны.</p>
                 </div>	
             </div>
-            <div className="advantages-card">
+            <div ref={Adv2} className={`advantages-card ${ViewAdv2 ? 'visible':''}`}>
                     <AiOutlineSafety className="advantages-icon" />
                 <h3>Высокий уровень безопасности</h3>
                 <div className="advantages-card-content">
                     <p>Депутатский город - это закрытый район, находящийся под постоянной охраной, что гарантирует безопасность жителей.</p>
                 </div>
             </div>
-            <div className="advantages-card">	
+            <div ref={Adv3} className={`advantages-card ${ViewAdv3 ? 'visible':''}`}>	
                     <TbBuildingBridge className="advantages-icon" />
                 <h3>Расположение</h3>
                 <div className="advantages-card-content">
