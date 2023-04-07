@@ -67,6 +67,14 @@
   margin-top: 40px;
   padding: 35px 70px;
   box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.06);
+  
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible{
+  opacity: 1;
+  transform: none;
 }
 .container1{
   background-image: url("./img-our-adv/1.png");
@@ -104,6 +112,9 @@ border-bottom: 1px solid var(--vazur);
 @media only screen and (max-width: 980px) {
   .about-project-card{
     flex-direction: column;
+  }
+  .about-project-card:nth-child(n+3){
+    flex-direction:column-reverse
   }
   .advanteges-header {
     font-size: 50px;

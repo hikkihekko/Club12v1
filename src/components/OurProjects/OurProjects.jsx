@@ -40,7 +40,7 @@ function OurProjects (){
   };
 
   return (
-    <div ref={Projects} id="projects" className="slider-container">
+    <div ref={Projects} id="projects" className={`slider-container ${ViewProject ? 'visible' : ''}`}>
       <Slider {...settings} className={`slider-container ${ViewProject ? 'visible' : ''}`}>
         {Array.from({ length: 5 }).map((_, index) => (
           <div className="slider-card" key={index}>

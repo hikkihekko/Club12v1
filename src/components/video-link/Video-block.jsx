@@ -24,7 +24,7 @@ function VideoLink() {
             </div>
         </div>
       <div className="video-container">
-        <video ref={videoRef} src="/video.mp4" className="video"></video>
+        <video ref={videoRef} src="" className="video"></video>
       </div>
       <Modal active={ModalActive} setActive={setModalActive}/>
     </div>
