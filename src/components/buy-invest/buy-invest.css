@@ -15,48 +15,42 @@
     width: 80%;
     margin: 0 auto;
     }
-    
+    .text-container{
+        text-align: center;
+    }
     .buy-block{
     padding: 30px;
     text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     }
     
     .buy-block>h3{
+    font-size: 35px;
     color: var(--gold);
     padding-bottom: 10px;
     }
     
     .invest-block{
     padding: 30px;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    flex: 1 1 50%;
     }
     
     .invest-block>h3{
     color: var(--gold);
+    font-size: 35px;
     }
     
-    .invest-block>p{
-    padding-top: 10px;
-    }
-    .invest-block>p:nth-child(4){
+    .text-container>p:nth-child(3){
         font-weight: 600;
         color: var(--gold);
     }
-    .invest-block>span{
-    padding-top: 10px;
-    }
-    
-    .invest-block>span:nth-child(4){
-    font-weight: bold;
-    font-size: larger;
-    color: var(--vazur);
-    }
-    
+
     @media screen and (max-width: 1200px){
         .buy-block .invest-block>p{
             font-size: 30px;
@@ -69,13 +63,19 @@
         .buy-invest-container {
             flex-direction: column;
         }
-        .invest-block>p{
+        .buy-block{
+            flex-direction: column;
+        }
+        .invest-block{
+            flex-direction: column;
+        }
+        .text-container>p{
             font-size: 30px;
         }
         .invest-block>h3{
             font-size: 30px;
         }
-        .buy-block>p{
+        .text-container>p{
             font-size: 30px;
         }
         .buy-block>h3{

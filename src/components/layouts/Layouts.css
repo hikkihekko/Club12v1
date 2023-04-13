@@ -60,11 +60,11 @@
   }
   .card-button-container>.slick-next{
     position: absolute;
-    top: 380%;
+    top: 415%;
     right: 25%;
   }
   .card-button-container>.slick-prev{
-    top: 380%;
+    top: 415%;
     left: 25%;
   }
   @media screen and (max-width: 1200px){
@@ -99,11 +99,11 @@
     }
     .card-button-container>.slick-next{
         position: absolute;
-        top: 354%;
+        top: 378%;
         right: 25%;
       }
       .card-button-container>.slick-prev{
-        top: 354%;
+        top: 378%;
         left: 25%;
       }
   }
