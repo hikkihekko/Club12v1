@@ -1,6 +1,12 @@
 .see-us{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     border-bottom: 1px solid var(--gold);
 }
 .call-us{
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

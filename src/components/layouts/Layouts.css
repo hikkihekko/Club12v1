@@ -1,12 +1,12 @@
 .layouts-container{
     width: 100%;
-    height: 480px;
+    height: 620px;
     display: flex;
     justify-content: center;
 }
-.bytton-conteyner{
+.button-conteyner{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -18,7 +18,8 @@
 }
 .card{
     display: flex;
-    padding: 0px 25px 0px 0px;
+    height: 500px;
+    width: fit-content;
     background-color: #ebebeb;
     border-radius: 15px;
     box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
@@ -28,13 +29,14 @@
     box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
 }
 .card-img{
-    max-width: 400px;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 15px
 }
 .card-text{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0px 55px;
 }
 .card-text-header{
@@ -50,29 +52,33 @@
     padding-top: 30px;
     border-top: 1px solid var(--vazur);
 }
-.card-text-paragraph:nth-child(4){
-    padding-bottom: 30px;
-}
-
-  .button:nth-child(2n){
+  .bytton-conteyner>.button:nth-child(n+1){
     margin-left: 20px;
+  }
+  .card-button-container{
+    width: 1px;
+  }
+  .card-button-container>.slick-next{
+    position: absolute;
+    top: 380%;
+    right: 25%;
+  }
+  .card-button-container>.slick-prev{
+    top: 380%;
+    left: 25%;
   }
   @media screen and (max-width: 1200px){
     
   }
   @media only screen and (max-width: 980px) {
-    .bytton-conteyner>button{
-        flex-basis: 33%;
-    }
-    .card {
-        padding: 0px;
+    .bytton-conteyner{
         flex-direction: column;
     }
-    .button:nth-child(n2) {
-        margin-left: 20px;
-    }
-    .button:nth-child(n){
-        margin-top: 30px;
+    .card {
+        height: fit-content;
+        padding: 0px;
+        flex-direction: row;
+        margin-bottom: 80px;
     }
     .card-text-header{
         font-size: 30px;
@@ -84,11 +90,20 @@
         max-width: 550px;
     }
     .layouts-container {
-        height: 1300px;
+        height: 1000px;
         align-items: center;
     }
     .layouts-card {
         height: 100%;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
+    .card-button-container>.slick-next{
+        position: absolute;
+        top: 354%;
+        right: 25%;
+      }
+      .card-button-container>.slick-prev{
+        top: 354%;
+        left: 25%;
+      }
   }

@@ -30,7 +30,7 @@ function Layouts() {
   return (
     <div id="layouts" className="layouts-container">
         <div className="layouts-card">
-            <div className="bytton-conteyner">
+            <div className="button-conteyner">
                 <button onClick={() => ChangeVisible(1)} className="button">
                     Подъезд 1
                 </button>
@@ -45,7 +45,7 @@ function Layouts() {
         VisibleElement.map((element) => (
             <div key={element.id} className="card">
                 <div className="card-img-container">
-                    <img src={element.src} alt="apart" className="card-img" />
+                    <img src={process.env.PUBLIC_URL + element.src} alt="apart" className="card-img" />
                 </div>
                 <div className="card-text">
                     <h3 className="card-text-header">УЗНАЙТЕ ЦЕНУ</h3>
@@ -65,8 +65,10 @@ function Layouts() {
                         <p>Площадь : {element.Площадь}</p>
                     </div>
                 </div>
-                <button onClick={() => ChangeVisible(element.id+1)}>+</button>
-                <button onClick={() => ChangeVisible(element.id-1)}>-</button>
+                <div className="card-button-container">
+                    <button onClick={() => ChangeVisible(element.id+1)} class="slick-arrow slick-next"> Next</button>
+                    <button onClick={() => ChangeVisible(element.id-1)} class="slick-arrow slick-prev"> Previous</button>
+                </div>
             </div>
         ))
         :

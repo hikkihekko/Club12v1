@@ -1,9 +1,16 @@
 .footer{
-    padding: 50px 0px;
+    margin-top: 50px;
+    padding: 30px 0px;
+    background-color: var(--vazur);
+    color: var(--white);
 }
 .footer-container{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+.more-info{
+    display: flex;
     align-items: center;
 }
 .more-info-header{
@@ -20,8 +27,9 @@
     height: 100%;
 }
 .social{
-    height: 25px;
-    width: 25px;
+    margin: 0px 15px;
+    height: 35px;
+    width: 35px;
     position: relative;
     transition: transform 0.3s cubic-bezier(0.04, 1.35, 0.71, 1.34);
     cursor: pointer ;
@@ -32,6 +40,15 @@
 }
 .call-paragraph{
     font-size: 20px;
+}
+.logo-footer{
+    background-image: url("/public/logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 120px;
+    height: 120px;
 }
 @media only screen and (max-width: 980px) {
     .more-info>h4{
