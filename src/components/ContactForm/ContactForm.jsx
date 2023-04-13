@@ -1,35 +1,54 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './ContactForm.css';
-import { useEffect } from 'react';
+import {useInput} from '../ContactForm/hooks/useInput';
 
-function ContactForm() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.innerHTML = `!function(a,m,o,c,r,m){a[o+c]=a[o+c]{setMeta:function(p){this.params=(this.params[]).concat([p])}},a[o+r]=a[o+r]function(f){a[o+r].f=(a[o+r].f[]).concat([f])},a[o+r]({id:"1113646",hash:"2e1fc79386799a141ace10a4157586aa",locale:"ru"}),a[o+m]=a[o+m]function(f,k){a[o+m].f=(a[o+m].f[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");`;
-    document.getElementById('amoforms_embed_1113646').appendChild(script);
+function ContactForm(){
+    const email = useInput('',{isEmpty: true});
+    const name = useInput('',{isEmpty: true});
+    
+    const [submitText, setSubmitText] = useState("Отправить");
 
-    const amoFormScript = document.createElement('script');
-    amoFormScript.src = 'https://forms.amocrm.ru/forms/assets/js/amoforms.js?1680696301';
-    amoFormScript.async = true;
-    amoFormScript.charset = 'utf-8';
-    document.getElementById('amoforms_embed_1113646').appendChild(amoFormScript);
-  }, []);
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setSubmitText("Все отправлено!");
+      let data = new FormData(e.target);
+      fetch('https://script.google.com/macros/s/AKfycbyo--o-91lCYr0I8FZSxDhy5yx_U4HIzAOY8xYzrQtiaHfLsRT0bExTYu8XMT6Lz0ywhQ/exec', {
+        method: "POST",
+        body: data
+      })
+        .then(res => res.text())
+        .then(data => {
+          document.querySelector("#msg").innerHTML = data;
+          setSubmitText("Отправить");
+        });
+    };
 
-  return (
-    <div className="input-form-container">
-      <div className='input-form-card'>
-        <div className="input-form-image">
-          <h2 className='input-form-header'>Наш менеджер подберет Вам лучшие варианты</h2>
-          <p className='input-form-paragraph'>Для этого оставьте, пожалуйста, Ваши контактные данные</p>
+
+    return(
+        <div className="input-form-container">
+            <div className='input-form-card'>
+                <div className="input-form-image">
+                    <h2 className='input-form-header'>Наш менеджер подберет Вам лучшие варианты</h2>
+                    <p className='input-form-paragraph'>Для этого оставьте, пожалуйста, Ваши контактные данные</p>
+                </div>
+                <div className="input-form">
+                    <h1 className='success' id="msg"></h1>
+                    <div className="input-error-container">
+                        {(email.isDirty && email.isEmpty) && <div className="input-error"> Поле не может быть пустым!</div>}
+                        {(name.isDirty && name.isEmpty) && <div className="input-error"> Пожалуйска укажите имя !</div>}
+                    </div>
+                    <form className="input-container" onSubmit={handleSubmit}>
+                        <input type="text" name="name" onChange={ e => email.onChange(e)} onBlur={e => email.onBlur(e)} value={email.value} placeholder='Name' className="input" /><br/>
+                        <input type="email" name="email" onChange={ e => name.onChange(e)} onBlur={e => name.onBlur(e)} value={name.value} placeholder='Email' className="input" /><br/>
+                        <input type="tel" name="phone" placeholder='Phone' className="input" /><br/>
+                        <textarea type="text" name="message" placeholder='Your answer' className="input input-message" /><br/>
+                        <button type="submit" className='send-value-button ' id='sub' >{submitText}</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div className="input-form">
-          <div className="input-container">
-            <div id="amoforms_embed_1113646"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+    )
+};
 
-export default ContactForm;
+
+export default ContactForm; 

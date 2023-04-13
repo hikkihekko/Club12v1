@@ -161,15 +161,16 @@
   }
   .input-form-card {
     padding: 0px;
+    flex-direction: column;
   }
   .input-form-image>h2{
-    font-size: 30px;
+    font-size: 40px;
   }
   .input-form-image>p{
-    font-size: 30px;
+    font-size: 35px;
   }
   .input-form-image{
-    max-width: 340px;
+    max-width: 500px;
   }
   .input-error{
     font-size: 30px;
@@ -180,5 +181,9 @@
   }
   .input-container>textarea{
     font-size: 30px;
+  }
+  .send-value-button{
+    font-size: 40px;
+    height: 70px;
   }
 }

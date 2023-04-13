@@ -54,7 +54,7 @@
     padding-bottom: 30px;
 }
 
-  .button:nth-child(n+2){
+  .button:nth-child(2n){
     margin-left: 20px;
   }
   @media screen and (max-width: 1200px){
