@@ -13,6 +13,8 @@ function BuyInvest() {
                     <p>При покупке 100% - </p> <p>1 000 000 тг квм </p>
                     <p>При покупке 50% - </p> <p> 1 200 000 тг квм</p>
                 </div>
+            </div>
+            <div className="buy-invest-container ">
                 <div className="invest-block">
                     <h3>Цена инвестиции:</h3>
                     <p>Инвестиционное предложение <br/> для ранних инвесторов </p> <p> 150 000 000 тенге </p>

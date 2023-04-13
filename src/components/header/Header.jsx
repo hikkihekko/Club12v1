@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import ModalConnect from "../ModalConnect/ModalConnect";
 import "../header/Header.css";
 import { Link } from "react-scroll";
@@ -7,14 +7,6 @@ function Header() {
   const [modalConnectActive, setModalConnectActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
 
-  useEffect(() => {
-    const body = document.querySelector("body");
-    if (menuActive) {
-      body.classList.add("modal-open");
-    } else {
-      body.classList.remove("modal-open");
-    }
-  }, [menuActive]);
   
   const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -28,7 +20,7 @@ function Header() {
     <header className="header">
       <nav className="nav-bar-header">
         <div className="logo-header" />
-        <div className="menu-icon" onClick={toggleMenu}>
+        <div className={menuActive ? "menu-icon menu-icon-active" : "menu-icon" } onClick={toggleMenu}>
           <i className={menuActive ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={` ${menuActive ? "nav-bar-header-items nav-bar-header-items-active" : "nav-bar-header-items"}`}>

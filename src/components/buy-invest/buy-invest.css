@@ -1,10 +1,11 @@
 .buy-invest{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     margin-top: 50px;
     }
-    
+.buy-invest-container:nth-child(2){
+    margin-top: 100px;
+}
     .buy-invest-container{
     border: 2px solid var(--vazur);
     border-radius: 15px;
@@ -18,8 +19,6 @@
     .buy-block{
     padding: 30px;
     text-align: center;
-    flex: 1 1 50%;
-    border-right: 1px solid var(--vazur);
     }
     
     .buy-block>h3{
@@ -44,7 +43,10 @@
     .invest-block>p{
     padding-top: 10px;
     }
-    
+    .invest-block>p:nth-child(4){
+        font-weight: 600;
+        color: var(--gold);
+    }
     .invest-block>span{
     padding-top: 10px;
     }
@@ -64,10 +66,6 @@
         }
       }
       @media only screen and (max-width: 980px) {
-        .buy-block{
-            border-bottom: 1px solid var(--vazur);
-            border-right: none;
-        }
         .buy-invest-container {
             flex-direction: column;
         }
