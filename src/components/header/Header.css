@@ -48,10 +48,9 @@
   .nav-bar-header-items-active::before{
     position: absolute;
     content: "";
-    width: 180vw;
+    width: 320vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
-
   }
   .nav-bar-header-items>li{
     display: none;

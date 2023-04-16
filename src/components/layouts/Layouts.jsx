@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
-// import { useInView } from 'react-intersection-observer';
+import React, { useState } from "react";
 import "../layouts/Layouts.css";
 import Aparts from "./About-apart.json";
 
 function Layouts() {
-    const [View, SetView] = useState(true);
-    // const { ref, inView } = useInView({
-    //     threshold: 0.2,
-    //   });
-    //   useEffect(()=>{SetView(true)},[inView]);
 
     const [VisibleElement, setVisibleElement] = useState(
         Aparts.filter((el) => el.active == true)
@@ -41,8 +35,7 @@ function Layouts() {
                     Подъезд 3
                 </button>
             </div>
-        { View ? 
-        VisibleElement.map((element) => (
+        { VisibleElement.map((element) => (
             <div key={element.id} className="card">
                 <div className="card-img-container">
                     <img src={process.env.PUBLIC_URL + element.src} alt="apart" className="card-img" />
@@ -71,8 +64,6 @@ function Layouts() {
                 </div>
             </div>
         ))
-        :
-        <div></div>
         }
       </div>
     </div>
