@@ -26,44 +26,32 @@ function Advantages(){
     useEffect(()=>{SetViewAdv3(true)},[InViewAdv3]);
 
 
-    const [ViewMap, SetViewMap] = useState(false);
-    const { ref:Map, inViewMap:ViewMapMap} = useInView({
-        threshold: 0.1,
-      });
-    useEffect(()=>{SetViewMap(true)},[ViewMapMap]);
-
 
     return(
         <>
         <div ref={Adv} id="services" className="services">
             <div className={`advantages-card ${ViewAdv ? 'visible':''}`}>
                     <RiBuilding2Line className="advantages-icon" />
-                <h3>Прекрасная инфраструктура</h3>
+                <h3>Инновации в каждой детали </h3>
                 <div className="advantages-card-content">
-                    <p>Депутатский город - это один из самых современных и комфортных районов Астаны.</p>
+                    <p>мы создаем уникальные дизайны и инновационные конструкции, которые не только обеспечивают красоту дома, но и экономят ресурсы и снижают нагрузку на окружающую среду.</p>
                 </div>	
             </div>
             <div ref={Adv2} className={`advantages-card ${ViewAdv2 ? 'visible':''}`}>
                     <AiOutlineSafety className="advantages-icon" />
-                <h3>Высокий уровень безопасности</h3>
+                <h3>Защита вашего комфорта и безопасности </h3>
                 <div className="advantages-card-content">
-                    <p>Депутатский город - это закрытый район, находящийся под постоянной охраной, что гарантирует безопасность жителей.</p>
+                    <p>мы используем передовые технологии и инновации при строительстве каждого дома, чтобы гарантировать максимальную защиту и комфорт для наших клиентов.</p>
                 </div>
             </div>
             <div ref={Adv3} className={`advantages-card ${ViewAdv3 ? 'visible':''}`}>	
                     <TbBuildingBridge className="advantages-icon" />
-                <h3>Расположение</h3>
+                <h3>Красота, которая вызывает восхищение </h3>
                 <div className="advantages-card-content">
-                    <p ref={Map}>По миму высокого уровня инфраструктуры у нас находятся туристические центры, такие как Синий купол и Пирамида</p>
+                    <p>наши дома не только функциональны и удобны, но и впечатляют своей эстетикой и гармоничным сочетанием материалов и цветов. Они не только защищают вас, но и приносят красоту и уют в вашу жизнь.</p>
                 </div>
             </div>
         </div>
-        {ViewMap ?
-        <div className="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40085.25776959043!2d71.47240646467843!3d51.102396957879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424583a1cfd078bd%3A0x85d46986fbe70106!2z0JTQtdC_0YPRgtCw0YLRgdC60LjQuSDQs9C-0YDQvtC00L7Qug!5e0!3m2!1sru!2skz!4v1680687388716!5m2!1sru!2skz" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        :
-        <div></div>}
         </>
     )
 }

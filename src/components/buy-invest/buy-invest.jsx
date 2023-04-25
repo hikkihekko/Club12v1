@@ -9,20 +9,17 @@ function BuyInvest() {
         <div id="buy-invest" className="buy-invest">
             <div className="buy-invest-container">
                 <div className="buy-block">
-                    <h3>Купить кваритру</h3>
+                    <h3>Закажи мечту</h3>
                 <div className="text-container">
-                    <p>При покупке 100% - 1 000 000 тг квм </p>
-                    <p>При покупке 50% -  1 200 000 тг квм</p>
+                    <p>Давай создадим твой идеальный дом вместе </p>
                 </div>
                 </div>
             </div>
             <div className="buy-invest-container ">
                 <div className="invest-block">
-                    <h3>Цена инвестиции:</h3>
+                    <h3>Получи выгоду</h3>
                     <div className="text-container">
-                        <p>Инвестиционное предложение <br/> для ранних инвесторов </p> <p> 150 000 000 тенге </p>
-                        <p>(минимальная сумма от 5 000 000)</p>
-                        <p>Доходность 30% </p>
+                        <p>Заказывай у Future - защити свой дом и получи инновационные решения по красоте интерьера</p>
                         <button onClick={()=> setModalActive(true)}>Связаться с нами</button>
                     </div>
                     <Modal active={ModalActive} setActive={setModalActive}/>

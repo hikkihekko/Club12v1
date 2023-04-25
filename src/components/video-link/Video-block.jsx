@@ -16,8 +16,8 @@ function VideoLink() {
   return (
     <div>
         <div className="cutaway-text-container">
-            <h2 className="cutaway-text-header">Club 12 </h2>
-            <span className="cutaway-text-paragraph">идеально подходит для тех, кто ищет вершину современной жизни.</span>
+            <h2 className="cutaway-text-header">FUTURE </h2>
+            <span className="cutaway-text-paragraph">идеально подходит для тех, кто заботится о своем будущем</span>
             <div className="button-container">
               <button className="button-play" onClick={playVideo}>Play Video</button>
               <button onClick={()=> setModalActive(true)}>Связаться с нами</button>

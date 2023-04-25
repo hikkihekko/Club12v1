@@ -32,23 +32,23 @@ function AboutProject(){
 
     return(
         <div id="advanteges" className="OurAdvantages">
-            <h2 className="advanteges-header">Шагните в мир Club 12 и ощутите вершину роскоши,<br/> живя в самом сердце Депутатского городка Астаны</h2>
+            <h2 className="advanteges-header">FUTURE заботится о благосостоянии каждого клиента.</h2>
             <div ref={Card1} className={`about-project-card ${ViewCard1 ? 'visible' : ''}`}>
                 <div className="advantages-container container1">
             </div>
             <div className="about-project-text-container">
-                <p className="advantages-paragraph">Каждый аспект проекта был тщательно продуман, чтобы предоставить жителям максимальную современную жизнь. От гладкой и стильной архитектуры до высококачественной отделки и первоклассных удобств. </p>
-                <p className="advantages-paragraph">Elevate by Prescott включает в себя не только просторные апартаменты</p>
+                <p className="advantages-paragraph"> Наша команда находит индевидуальный подход к каждому проекту, старается раскрыть все нотки души заказчика, чтобы сделать для него идеальные уссловия. </p>
+                <p className="advantages-paragraph">FUTURE - это про ваше будушее!</p>
                 <button onClick={()=> setModalActive(true)}>Связаться с нами</button>
                 <span className="about-project-connect-text">Чтобы получить детальную информацию <br/> по проекту нажмите на эту кнопку</span>
             </div>
             </div>
             <div ref={Card2} className={`about-project-card ${ViewCard2? 'visible' : ''}`}>
                 <div className="about-project-text-container">
-                    <h2 className="advanteges-header">Для тех, кто ищет удобство и легкий доступ к первоклассным удобствам </h2>
-                    <p className="advantages-paragraph">Расположенный всего в нескольких шагах от реки Ишим, Президентского парка и школы  Haileybury Astana , жители будут иметь лучшее, что есть в городе, прямо у их порога.</p>
-                    <p className="advantages-paragraph">3-этажный комплекс Club 12 с отдельной парковкой представляет собой идеальное сочетание роскоши и удобства.</p>
-                    <p className="advantages-paragraph last-paragpaph">Имея всего 2 квартиры на этаже, жители будут наслаждаться максимальной конфиденциальностью и эксклюзивностью, что делает Club идеальным выбором для тех, кто ищет максимальную роскошь.</p>
+                    <h2 className="advanteges-header">Future: мы создаем не только дома, но и Ваше будущее! </h2>
+                    <p className="advantages-paragraph">Добро пожаловать в Future - компанию, которая создает будущее вашей мечты! Мы специализируемся на строительстве жилых домов на заказ, которые сочетают в себе элегантный дизайн и высокое качество. </p>
+                    <p className="advantages-paragraph">Мы предлагаем индивидуальный подход к каждому проекту, который учитывает все ваши потребности и желания. </p>
+                    <p className="advantages-paragraph last-paragpaph">Наша команда профессионалов обеспечивает не только высококлассное строительство, но и внимательное отношение к деталям и превосходный сервис на всех этапах проекта. Мы создаем не просто дома, мы создаем ваше будущее!</p>
                 </div>
                 <div className="advantages-container container2">
                 </div>

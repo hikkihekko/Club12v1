@@ -98,8 +98,8 @@ function Header() {
           </li>
         </ul>
         <div className="connect">
-          <a href="tel:+97142473678" className="telephone-item">
-            +97 14 247 36 78
+          <a href="tel:+88888888888" className="telephone-item">
+            +8 888 888 88 88
           </a>
           <button
             className="connect-button"
